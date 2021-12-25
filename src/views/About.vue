@@ -1,13 +1,37 @@
 <script setup>
 import ButtonRepo from "@/components/ButtonRepo.vue";
 
-function save() {
-  store.commit("SAVE_NOTE", title.value);
-}
+import { useStore } from "vuex";
+import { computed, ref } from "vue";
+
+const store = useStore();
+
+const name = ref("");
+const email = ref("");
+const submitDisabled = computed(
+  () => name.value.length === 0 || email.value.length === 0
+);
+const submit = () => {
+  const customer = {
+    name: name.value,
+    email: email.value,
+  };
+  store.commit("customers/add", customer);
+  name.value = "";
+  email.value = "";
+};
+
+const notes = computed(() => store.state.notes);
 </script>
 
 <template>
-  <div class="bg-gray-500">
+  <div class="">
+    <ul>
+      <li v-for="(note, index) in notes" :key="index">
+        {{ note }} <button class="ml-1 btn btn-warning btn-xs">remove</button
+        ><button class="ml-1 btn btn-xs btn-error">edit</button>
+      </li>
+    </ul>
     <div
       class="
         max-w-screen-xl
@@ -24,7 +48,6 @@ function save() {
           font-extrabold
           leading-9
           tracking-tight
-          text-gray-900
           sm:text-4xl sm:leading-10
         "
       >
