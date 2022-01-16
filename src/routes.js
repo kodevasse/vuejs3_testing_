@@ -4,6 +4,7 @@ import NotFound from "./views/NotFound.vue";
 import CreateCustomer from "./views/CreateCustomer.vue";
 import ListCustomer from "./views/ListCustomer.vue";
 import ListUsers from "./views/ListUsers.vue";
+import Tester from "./views/Tester.vue";
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 export const routes = [
@@ -36,6 +37,11 @@ export const routes = [
     path: "/users",
     meta: { title: "Users" },
     component: ListUsers,
+  },
+  {
+    path: "/tester",
+    meta: { title: "Tester" },
+    component: Tester,
   },
   { path: "/:path(.*)", component: NotFound },
 ];

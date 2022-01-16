@@ -1,4 +1,5 @@
 import { createStore, createLogger } from "vuex";
+import newsletter from "./modules/newsletter";
 // import user from "./modules/user.js";
 import axios from "axios";
 // import cart from "./modules/cart";
@@ -125,6 +126,7 @@ export default createStore({
   modules: {
     customers,
     user,
+    newsletter,
   },
   strict: debug,
 });

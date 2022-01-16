@@ -13,6 +13,7 @@ store.dispatch("user/fetchUsers");
 </script>
 
 <template>
+  <CompOne />
   <div class="">
     <!-- <span v-if="isLoading">Loading...</span> -->
     <ul>

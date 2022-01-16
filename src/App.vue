@@ -29,6 +29,9 @@ setInterval(() => {
         <button class="btn btn-primary" @click="$router.push('/users')">
           List users
         </button>
+        <button class="btn btn-primary" @click="$router.push('/tester')">
+          Tester
+        </button>
       </div>
     </header>
     <main>
