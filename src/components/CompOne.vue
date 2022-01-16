@@ -1,3 +1,10 @@
+<script setup>
+import {subbeder} from './state.js'
+
+const props = defineProps(["subbedTwo"])
+const emits = defineEmits(["accepted"])
+</script>
+
 <template>
   <div class="w-64 h-64 border-2 bg-teal-700">
     Comp 1
@@ -13,20 +20,3 @@
     Subbed
   </button>
 </template>
-<script>
-import { useStore } from "vuex";
-import { computed, ref } from "vue";
-export default {
-  setup() {
-    const subbeder = ref(false);
-
-    return { subbeder };
-  },
-  props: ["subbedTwo"],
-  emits: ["accepted"],
-
-  data() {
-    return {};
-  },
-};
-</script>
