@@ -1,5 +1,6 @@
 <script setup>
 import { subbed, text } from "./state.js";
+import { ref, computed } from "vue";
 
 const props = defineProps(["subbedTwo"]);
 const emits = defineEmits(["accepted"]);
@@ -10,6 +11,10 @@ const value3 = "valuethree";
 const changeText = () => {
   text.value = "Button clicked";
 };
+let input = ref("");
+const error = computed(() => {
+  return input.value === "" ? "The Input field is required" : "";
+});
 </script>
 
 <template>
@@ -24,6 +29,14 @@ const changeText = () => {
       <p>{{ text }}</p>
     </div>
   </div>
+
+  <input
+    type="text"
+    placeholder="Full Name"
+    autocomplete="off"
+    v-model="input"
+    class="text-black"
+  />
 
   <button class="btn btn-primary" @click="subbed = !subbed">Subbed</button>
   <button class="btn btn-primary" @click="changeText()">Changetext</button>

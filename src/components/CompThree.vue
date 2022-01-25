@@ -1,5 +1,5 @@
 <script setup>
-import { subbed, text } from "./state.js";
+import { subbed, text, email } from "./state.js";
 </script>
 
 <template>
@@ -8,5 +8,7 @@ import { subbed, text } from "./state.js";
     <h1 v-if="subbed">YOUR SUBBED IN COMP 1</h1>
 
     {{ text }}
+    <button class="btn btn-primary" @click="subbed = !subbed">Subbed</button>
+    <p>{{ email }}</p>
   </div>
 </template>
