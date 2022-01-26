@@ -18,20 +18,27 @@ setInterval(() => {
         >
           {{ $route.meta.title }} / {{ counter }}
         </h1>
-        <button class="btn btn-primary" @click="$router.push('create')">
-          Create customer
-        </button>
-        <button class="btn btn-primary" @click="$router.push('list')">
-          List customer
-        </button>
-        <button class="btn btn-primary" @click="$router.push('/')">home</button>
+        <div class="gap-x-1 flex flex-row">
+          <button class="btn btn-primary" @click="$router.push('create')">
+            Create customer
+          </button>
+          <button class="btn btn-primary" @click="$router.push('list')">
+            List customer
+          </button>
+          <button class="btn btn-primary" @click="$router.push('/')">
+            home
+          </button>
 
-        <button class="btn btn-primary" @click="$router.push('/users')">
-          List users
-        </button>
-        <button class="btn btn-primary" @click="$router.push('/tester')">
-          Tester
-        </button>
+          <button class="btn btn-primary" @click="$router.push('/users')">
+            List users
+          </button>
+          <button class="btn btn-primary" @click="$router.push('/tester')">
+            Tester
+          </button>
+          <button class="btn btn-primary" @click="$router.push('/crypto')">
+            Crypto
+          </button>
+        </div>
       </div>
     </header>
     <main>

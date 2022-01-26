@@ -5,6 +5,7 @@ import CreateCustomer from "./views/CreateCustomer.vue";
 import ListCustomer from "./views/ListCustomer.vue";
 import ListUsers from "./views/ListUsers.vue";
 import Tester from "./views/Tester.vue";
+import Crypto from "./views/Crypto.vue";
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 export const routes = [
@@ -27,6 +28,11 @@ export const routes = [
     path: "/create",
     meta: { title: "create" },
     component: CreateCustomer,
+  },
+  {
+    path: "/crypto",
+    meta: { title: "crypto" },
+    component: Crypto,
   },
   {
     path: "/list",
