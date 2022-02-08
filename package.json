@@ -9,7 +9,7 @@
   "dependencies": {
     "axios": "^0.24.0",
     "daisyui": "^1.22.0",
-    "vue": "^3.2.26",
+    "vue": "^3.2.30",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
   },
